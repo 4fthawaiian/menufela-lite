@@ -8,8 +8,8 @@ A little SIMBL hack that enables you to toggle the menubar on/off and other thin
 
 * hides menubar
 * hides titlebars of cocoa based apps
-* draws border in focused window
-* focus follows mouse
+* ~~draws border in focused window~~
+* ~~focus follows mouse~~
 
 ## le screenshot
 
