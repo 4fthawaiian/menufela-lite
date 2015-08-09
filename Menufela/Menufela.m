@@ -5,10 +5,10 @@
 #import <objc/runtime.h>
 
 
-#define KILLLIST @[@"com.apple.iTunes", @"com.torusknot.SourceTree", @"freemind.main.FreeMind"] // Only hide menubar
+#define KILLLIST @[@"org.vim.MacVim", @"fm.last.Scrobbler", @"com.tinyspeck.slackmacgap",@"com.apple.finder", @"com.unity3d.UnityEditor5.x", @"com.apple.iTunes",@"com.apple.dt.Xcode", @"com.torusknot.SourceTree", @"freemind.main.FreeMind"] // Only hide menubar
 #define BLACKLIST @[@"com.apple.systempreferences", @"com.adobe.Photoshop", @"com.rdio.desktop", @"net.elasticthreads.nv"] // Only draw border
-#define GRAYLIST @[@"com.apple.Safari", @"com.google.chrome"]  // Draw border and watch mouse
-
+//#define GRAYLIST @[@"com.apple.Safari", @"com.google.chrome"]  // Draw border and watch mouse
+#define GRAYLIST @[]
 #pragma mark Definitions
 
 #define PrefKey(key)  (@"Menufela_" key)
@@ -147,10 +147,10 @@ static const char * const mf_hasBeenUpdatedKey = "mf_hasBeenUpdated";
                           context:NULL];
 
 
-    // Wait till we're onscreen to add borders
-    [NotificationCenter addObserver:self selector:@selector(mf_initBorder)
-                               name:NSWindowDidUpdateNotification
-                             object:self];
+//    // Wait till we're onscreen to add borders
+//    [NotificationCenter addObserver:self selector:@selector(mf_initBorder)
+//                               name:NSWindowDidUpdateNotification
+//                             object:self];
 }
 
 - (void)mf_initBorder
@@ -305,13 +305,13 @@ updateBorder:
 
 #pragma mark -
 
-- (void)mouseEntered:(NSEvent *)aEvent
-{
-    if([NSEvent modifierFlags] & NSCommandKeyMask || self.isKeyWindow)
-        return;
-    [self makeKeyAndOrderFront:nil];
-    [NSApp activateIgnoringOtherApps:YES];
-}
+//- (void)mouseEntered:(NSEvent *)aEvent
+//{
+//    if([NSEvent modifierFlags] & NSCommandKeyMask || self.isKeyWindow)
+//        return;
+//    [self makeKeyAndOrderFront:nil];
+//    [NSApp activateIgnoringOtherApps:YES];
+//}
 
 
 - (void)mf_observeValueForKeyPath:(NSString *)keyPath

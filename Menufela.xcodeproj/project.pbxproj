@@ -263,7 +263,7 @@
 				INFOPLIST_FILE = "Menufela/Menufela-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = "-fobjc-gc";
+				OTHER_CFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -279,7 +279,7 @@
 				GCC_PREFIX_HEADER = "Menufela/Menufela-Prefix.pch";
 				INFOPLIST_FILE = "Menufela/Menufela-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				OTHER_CFLAGS = "-fobjc-gc";
+				OTHER_CFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;
 			};
